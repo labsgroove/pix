@@ -2,8 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Overlay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Overlay Vertical</title>
   <style>
     * {
       margin: 0;
@@ -11,10 +11,11 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       width: 100%;
       height: 100%;
       overflow: hidden;
+      background: #000;
     }
 
     iframe {
@@ -30,11 +31,12 @@
     img {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100vh;
+      width: auto;
       z-index: 1;
-      pointer-events: none; /* Pra deixar clicável o site embaixo */
+      pointer-events: none; /* Clicável no site de fundo */
     }
   </style>
 </head>
